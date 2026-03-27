@@ -9,8 +9,10 @@ coverage/
 # Production
 dist/
 build/
+*.zip
 
-# Misc
+# History and Misc
+.history/
 .DS_Store
 *.pem
 
