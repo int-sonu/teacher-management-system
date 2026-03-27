@@ -20,8 +20,7 @@ export default function Login() {
       await dispatch(login(form)).unwrap();
       navigate("/teachers");
     } catch (err: any) {
-      const status = err.status || err.response?.status ? `[Error ${err.status || err.response?.status}] ` : "";
-      setError(`${status}${err?.message || "Invalid email or password"}`);
+      setError(err?.message || "Invalid email or password");
     }
   };
 

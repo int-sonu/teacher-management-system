@@ -32,9 +32,8 @@ export default function TeacherForm({ open, onClose, onSubmit, initialData }: Te
       await onSubmit(form);
       onClose();
     } catch (err: any) {
-      const status = err.response?.status ? `[Error ${err.response.status}] ` : "";
       const msg = err.response?.data?.message || err.message || "Failed to save teacher";
-      setError(`${status}${msg}`);
+      setError(msg);
     }
   };
 

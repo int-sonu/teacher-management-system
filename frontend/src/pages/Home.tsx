@@ -10,13 +10,13 @@ export default function Home() {
         alignItems: "center" 
       }}>
         <div style={{ textAlign: "left" }}>
-          <h1 style={{ fontSize: "4rem", lineHeight: "1.1", marginBottom: "1.5rem" }}>
+          <h1 style={{ fontSize: "4.5rem", lineHeight: "1.2", marginBottom: "2rem", marginLeft: "-2px" }}>
             Improve your <br />
-            <span style={{ color: "#00796b", borderBottom: "4px solid #ff9800" }}>Skill</span> <br />
+            <span style={{ color: "#00796b", borderBottom: "4px solid #ff9800",marginLeft: "-2px"  }}>Skill</span> <br />
             with Different <br />
             Way
           </h1>
-          <p style={{ fontSize: "1.2rem", color: "#6b7280", marginBottom: "2.5rem", maxWidth: "450px" }}>
+          <p style={{ fontSize: "1.25rem", color: "#6b7280", marginBottom: "3rem", maxWidth: "480px", lineHeight: "1.6" }}>
             Experience a revolutionary way of academic tracking and growth. Set your own pace, manage your resources, and excel in your field with our professional management suite.
           </p>
           <Link to="/register" style={{

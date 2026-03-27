@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 function AppContent() {
   const location = useLocation();
-  const hideFooter = ["/login", "/register"].includes(location.pathname);
+  const hideFooter = ["/login", "/register", "/teachers"].some(p => location.pathname.startsWith(p));
 
   return (
     <>

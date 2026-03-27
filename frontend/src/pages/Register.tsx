@@ -21,8 +21,7 @@ export default function Register() {
       await dispatch(register(form)).unwrap();
       navigate("/login");
     } catch (err: any) {
-      const status = err.status || err.response?.status ? `[Error ${err.status || err.response?.status}] ` : "";
-      setError(`${status}${err || "Registration failed. Please try again."}`);
+      setError(err || "Registration failed. Please try again.");
     }
   };
 

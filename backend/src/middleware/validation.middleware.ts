@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from "express";
+import type { Request, Response, NextFunction } from "express";
 
 export const validateRegistration = (req: Request, res: Response, next: NextFunction) => {
   let { name, email, password } = req.body;
@@ -38,6 +38,12 @@ export const validateTeacher = (req: Request, res: Response, next: NextFunction)
   let { name, subject, email } = req.body;
   if (!name || !subject || !email) {
     return res.status(400).json({ message: "Name, subject and email are required" });
+  }
+  if (name.trim().length < 2) {
+    return res.status(400).json({ message: "Name must be at least 2 characters" });
+  }
+  if (subject.trim().length < 2) {
+    return res.status(400).json({ message: "Subject must be at least 2 characters" });
   }
   if (email.includes(" ")) {
     return res.status(400).json({ message: "Teacher email cannot contain spaces" });
